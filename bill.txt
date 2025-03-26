@@ -1,0 +1,14 @@
+============Online Movie Ticket
+
+Customer name: Mathusa
+Movie name: Romantic Escape
+Date: 2025-04-03
+Show time: Morning
+
+-------------------------------------------------------
+Booked seats count: 2
+Total price: 19.0
+-------------------------------------------------------
+
+bill saved inbill.txt
+THANKYOU
