@@ -89,7 +89,7 @@ public class onlinemovie{
             }
 
             if(!founddate){
-                System.out.println("Invalid date!! Enter invalid date. ");
+                System.out.println("There is no show in this date!! Enter invalid date. ");
             }
             else{
                 break;
@@ -99,27 +99,40 @@ public class onlinemovie{
         
         System.out.println();
 
+        Movie selectedmovie = null;
+
         while(true){
             System.out.print("Enter the show time: ");
             String showtime_input = scan.nextLine();
 
-            boolean foundshowtime;
+            boolean foundshowtime = false;
 
             for(int k=0; k<availabledatemovie.size(); k++){
                 if(availabledatemovie.get(k).showtime.equalsIgnoreCase(showtime_input)){
-                    System.out.println("Movie_Name: "+availabledatemovie.get(k).moviename+", Available showtime: "+availabledatemovie.get(k).showtime+", available seats: "+availabledatemovie.get(k).availableseats+", ticket price: "+availabledatemovie.get(k).ticketprice);
+                    selectedmovie = availabledatemovie.get(k);
+                    foundshowtime = true;
                     break;
                 }
                 else{
                     continue;
                 }
             }
-            
+            if(foundshowtime){
+                System.out.println("Movie_Name: "+selectedmovie.moviename+", Available showtime: "+selectedmovie.showtime+", available seats: "+selectedmovie.availableseats+", ticket price: "+selectedmovie.ticketprice);
+                break;
+            }
+            else{
+                System.out.println("Enter valid showtime that before mentioned:");
+                continue;
+            }
         }
-        
+
+        ///////
+
 
         
-
+        
+        
 
     }
 
